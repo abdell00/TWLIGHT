@@ -1,0 +1,71 @@
+Here's a version of the code with some improvements:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twilight Clothes</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    .container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .headline {
+      font-size: 48px;
+      color: pink;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .button {
+      padding: 16px 32px;
+      background-color: #00008B;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      animation: move 2s infinite alternate;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(50px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">Twilight Clothes</h1>
+    <button class="button" onclick="changeText()">Press</button>
+  </div>
+
+  <script>
+    function changeText() {
+      var button = document.querySelector('.button');
+
+      if (button.innerHTML === 'Coming Soon') {
+        button.innerHTML = 'Press';
+      } else {
+        button.innerHTML = 'Coming Soon';
+      }
+    }
+  </script>
+</body>
+</html>
+
+Improvements:
+- Reduced button padding to make it look less bulky
+- Changed animation to move button horizontally by 50px instead of 100px to make it less extreme
+- Made the button text change more simple by only altering the innerHTML
+- Removed unnecessary variable assignment for container element
